@@ -1,0 +1,166 @@
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000000;
+}
+
+.navegation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 80px;
+    background: #031540;
+    box-shadow: 10px 0 0 #fff;
+    border-left: 10px solid #031540;
+    overflow-x: hidden;
+    transition: width 0.5s;
+}
+
+.navegation:hover{
+    width: 300px;
+}
+
+.navegation ul li.logo {
+    margin-bottom: 50px;
+}
+
+.navegation ul li.logo .icon {
+    font-size: 2em;
+}
+
+.navegation ul li.logo .title {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+  
+.navegation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 5px;
+    padding-top: 40px;
+}
+  
+.navegation ul li {
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+  
+.navegation ul li.active {
+    background: #fff;
+}
+  
+.navegation ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+}
+  
+.navegation ul li.active a{
+    color: #031540;
+}
+  
+.navegation ul li.active a::before{
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 15px 15px 0 #fff;
+}
+  
+.navegation ul li.active a::after{
+    content: '';
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 15px -15px 0 #fff;
+}
+
+.navegation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+
+.navegation ul li a .icon .ion-icon {
+    position: relative;
+    font-size: 1.5em;
+    z-index: 1;
+}
+
+.navegation ul li a .title {
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+
+.icon .letras, .icon .mapa {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.icon .letras {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon .letras h1 {
+    position: relative;
+    z-index: 1;
+    font-family: 'Roboto Slab', serif;
+    font-size: 30px;
+    -webkit-text-stroke: 1px black;
+    color: #FFA500;
+    text-shadow: 0px 0px 5px black;
+}
+
+.icon .mapa {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: lightblue;
+    border-radius: 50%;
+    box-shadow: -30px -20px 0 0 rgba(0, 0, 0, .15) inset,
+                -70px -30px 0 0 rgba(0, 0, 0, .1) inset,
+                5px -5px 0 0 rgba(255, 255, 255, .2) inset;
+    background: url("../img/mapa.jpg");
+    background-size: cover;
+    -webkit-animation: tierra-girando 10s infinite linear;
+}
+  
+@-webkit-keyframes tierra-girando {
+    from {
+      background-position: left center;
+    }
+    to {
+      background-position: -309.5px center;
+    }
+}
